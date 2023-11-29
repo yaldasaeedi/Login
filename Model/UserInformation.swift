@@ -11,7 +11,6 @@ import Foundation
 struct UserInformation : Codable{
     
     var mobileNumber : String
-    var uuid : String = "056e5f9c-8cfa-11ee-b9d1-0242ac120002"
     var dialCode: String = PhoneNumberRegionCode.Iran.countryCode
     var regionCode : String = PhoneNumberRegionCode.Iran.countryName
     var action : String = "2"

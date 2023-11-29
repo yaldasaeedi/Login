@@ -9,20 +9,17 @@ import Foundation
 
 class NetworkConstant {
         
-        public static var shared: NetworkConstant = NetworkConstant()
+    public static var shared: NetworkConstant = NetworkConstant()
         
-        private init(){
+    private init(){
             
-        }
+    }
         
     public var servarAddress : String {
-            get{
-                return "https://app.neshanmap.ir/iran-map-api"
-            }
-        }
-       
-
         
-    
-    
+        get{
+            
+            return "https://app.neshanmap.ir/iran-map-api"
+        }
+    }
 }
