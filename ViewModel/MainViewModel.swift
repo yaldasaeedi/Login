@@ -25,11 +25,18 @@ class MainViewModel{
         
         
     }
-    func checkVerificationCode(completionHandler: @escaping ( _ result : Result<String, NetworkError>) -> Void, code : String, phone : String){
+    func checkVerificationCode(completionHandler: @escaping ( _ result : Result<String, NetworkError>) -> Void, code : String, phone : String, regionCode : String){
+        
         APICaller.reciveVerificationSMSFromUser(completionHandler: { result in
             switch result{
             case .success(let token):
                 print ("token\(token)")
+                self.userInformation?.mobileNumber = phone
+                self.userInformation?.action = "2"
+                self.userInformation?.regionCode = regionCode
+                //self.userInformation?.dialCode
+                self.userInformation?.userToken = token
+                
                 completionHandler(.success("success"))
             case .failure(let error):
                 
@@ -37,7 +44,8 @@ class MainViewModel{
                 completionHandler(.failure(error))
                 
             }
-        }, mobileNumber: phone, verificationCode: code)
+        }, mobileNumber: phone, verificationCode: code, regionCode: regionCode)
         
     }
+    
 }

@@ -12,8 +12,8 @@ enum NetworkError : Error {
 }
 public class APICaller{
         
-    static func sendVerificationSMSToUser(completionHandler: @escaping ( _ result : Result< String , NetworkError>) -> Void, mobileNumber : String) {
-        let urlString = "\(NetworkConstant.shared.servarAddress)/v3/verification/sms/request?mobileNumber=\(mobileNumber)&uuid=4859532c-8ded-11ee-b9d1-0242ac120002&dialCode=98&regionCode=IR"
+    static func sendVerificationSMSToUser(completionHandler: @escaping ( _ result : Result< String , NetworkError>) -> Void, mobileNumber : String, regionCode : String, dialCode: String ) {
+        let urlString = "\(NetworkConstant.shared.servarAddress)/v3/verification/sms/request?mobileNumber=\(mobileNumber)&uuid=4859532c-8ded-11ee-b9d1-0242ac120002&dialCode=\(dialCode))&regionCode=\(regionCode)"
         guard let url = URL(string: urlString) else{ return }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
@@ -37,9 +37,9 @@ public class APICaller{
             }
         }.resume()
     }
-    static func reciveVerificationSMSFromUser(completionHandler: @escaping ( _ result : Result<Token, NetworkError>) -> Void, mobileNumber : String,verificationCode : String ){
+    static func reciveVerificationSMSFromUser(completionHandler: @escaping ( _ result : Result<Token, NetworkError>) -> Void, mobileNumber : String,verificationCode : String , regionCode : String){
         print(verificationCode)
-        let urlString = "\(NetworkConstant.shared.servarAddress)/v3/verification/sms/verify?mobileNumber\(mobileNumber)&uuid=4859532c-8ded-11ee-b9d1-0242ac120002&verificationCode=\(verificationCode)&action=2&regionCode=IR"
+        let urlString = "\(NetworkConstant.shared.servarAddress)/v3/verification/sms/verify?mobileNumber\(mobileNumber)&uuid=4859532c-8ded-11ee-b9d1-0242ac120002&verificationCode=\(verificationCode)&action=2&regionCode=\(regionCode)"
         guard let url = URL(string: urlString) else{ return }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
