@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeO-4A-pyw">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="it1-jw-sHV">
+                                        <rect key="frame" x="12" y="0.0" width="369" height="410"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ورود به حساب شخصی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrE-0I-2MX">
+                                                <rect key="frame" x="0.0" y="0.0" width="369" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="91U-0q-meO"/>
+                                                </constraints>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="31" bottom="8" trailing="8"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="3G4-AK-nMX">
+                                                <rect key="frame" x="0.0" y="70" width="369" height="80"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره همراه خود را وارد کنید." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZE2-MA-2pL">
+                                                <rect key="frame" x="0.0" y="180" width="369" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="uAd-WX-suC">
+                                                <rect key="frame" x="0.0" y="270" width="369" height="60"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="i3a-HS-HQy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="60"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                        <connections>
+                                                            <action selector="phoneNumberEditing:" destination="BYZ-38-t0r" eventType="editingChanged" id="Yks-9o-Uc3"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <keyboardLayoutGuide key="keyboard" id="MeT-wL-jUL"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="M3Q-sz-rXt"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyU-7M-MP8">
+                                                <rect key="frame" x="0.0" y="360" width="369" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="tmx-gG-83u"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="ثبت شماره همراه">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="phoneRecuestBTNClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wpk-Hh-WhZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="HrE-0I-2MX" firstAttribute="leading" secondItem="it1-jw-sHV" secondAttribute="leading" id="4zW-Uw-bmC"/>
+                                            <constraint firstItem="WyU-7M-MP8" firstAttribute="leading" secondItem="it1-jw-sHV" secondAttribute="leading" id="Npm-dK-QVP"/>
+                                            <constraint firstItem="WyU-7M-MP8" firstAttribute="leading" secondItem="it1-jw-sHV" secondAttribute="leading" id="VCN-bu-kUH"/>
+                                            <constraint firstAttribute="trailing" secondItem="WyU-7M-MP8" secondAttribute="trailing" id="g1Y-7e-18r"/>
+                                            <constraint firstAttribute="trailing" secondItem="WyU-7M-MP8" secondAttribute="trailing" id="ilU-m2-ela"/>
+                                            <constraint firstAttribute="trailing" secondItem="HrE-0I-2MX" secondAttribute="trailing" id="n1H-Xq-kog"/>
+                                            <constraint firstItem="HrE-0I-2MX" firstAttribute="top" secondItem="it1-jw-sHV" secondAttribute="top" id="pZ6-9n-hg1"/>
+                                            <constraint firstItem="ZE2-MA-2pL" firstAttribute="height" secondItem="3G4-AK-nMX" secondAttribute="height" multiplier="0.75" id="rQq-Iq-MXW"/>
+                                            <constraint firstItem="3G4-AK-nMX" firstAttribute="height" secondItem="HrE-0I-2MX" secondAttribute="height" multiplier="2" id="zOu-zH-fCD"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="it1-jw-sHV" secondAttribute="trailing" constant="12" id="7wj-ab-ZVK"/>
+                                    <constraint firstItem="it1-jw-sHV" firstAttribute="leading" secondItem="oeO-4A-pyw" secondAttribute="leading" constant="12" id="n4d-H5-Gev"/>
+                                    <constraint firstItem="it1-jw-sHV" firstAttribute="top" secondItem="oeO-4A-pyw" secondAttribute="top" id="uGB-FN-3JD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oeO-4A-pyw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3zI-ki-wBU"/>
+                            <constraint firstItem="oeO-4A-pyw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BA9-24-isS"/>
+                            <constraint firstItem="oeO-4A-pyw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c1q-P4-S4T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oeO-4A-pyw" secondAttribute="trailing" id="cSi-Id-l8Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gnc-aC-7af"/>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="i3a-HS-HQy" id="kmd-qx-m03"/>
+                        <outlet property="phoneRecuestBTN" destination="WyU-7M-MP8" id="4sk-mR-m7v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.6412213740457" y="3.5211267605633805"/>
+        </scene>
+        <!--CodeVerification-->
+        <scene sceneID="ymH-8B-xeN">
+            <objects>
+                <viewController storyboardIdentifier="CodeVerification" title="CodeVerification" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J0x-ab-REE" customClass="CodeVerificationViewController" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FIu-5V-4yb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4qc-N5-pTJ">
+                                <rect key="frame" x="12" y="59" width="369" height="390.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تایید شماره همراه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gi3-jB-svu">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="eP4-qH-leA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد چهار رقمی ارسال شده خود را وارد نمایید" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qb-lq-kn1">
+                                        <rect key="frame" x="0.0" y="70" width="369" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jue-AT-CI9">
+                                        <rect key="frame" x="0.0" y="120.33333333333334" width="369" height="60"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tt4-xZ-e9J">
+                                                <rect key="frame" x="0.0" y="0.0" width="369" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="bvy-zM-z9X"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="verificationCodeEditing:" destination="J0x-ab-REE" eventType="editingChanged" id="NiK-WH-lFZ"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEZ-n3-AIZ">
+                                        <rect key="frame" x="0.0" y="210.33333333333331" width="369" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hhC-ZX-r9v"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="ثبت"/>
+                                        <connections>
+                                            <action selector="verificationCodeBTNClicked:" destination="J0x-ab-REE" eventType="touchUpInside" id="WXn-s3-8JB"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="________________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKc-L5-MSu">
+                                        <rect key="frame" x="0.0" y="290.33333333333331" width="369" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DLs-sa-Lno">
+                                        <rect key="frame" x="0.0" y="340.66666666666669" width="369" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="de6-Jm-d7m">
+                                                <rect key="frame" x="0.0" y="0.0" width="369" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kjZ-aw-ySU"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="ارسال مجدد کد">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendCodeAgainBTNClicked:" destination="J0x-ab-REE" eventType="touchUpInside" id="r6A-lK-b7b"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h81-XO-iaJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4qc-N5-pTJ" firstAttribute="top" secondItem="h81-XO-iaJ" secondAttribute="top" id="E3f-KP-wZy"/>
+                            <constraint firstItem="4qc-N5-pTJ" firstAttribute="leading" secondItem="h81-XO-iaJ" secondAttribute="leading" constant="12" id="gCX-Xk-48I"/>
+                            <constraint firstItem="h81-XO-iaJ" firstAttribute="trailing" secondItem="4qc-N5-pTJ" secondAttribute="trailing" constant="12" id="xua-ms-tGH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tZs-sG-a2m"/>
+                    <connections>
+                        <outlet property="verificationCodeBTN" destination="QEZ-n3-AIZ" id="hCz-lo-WTb"/>
+                        <outlet property="verificationCodeTextField" destination="Tt4-xZ-e9J" id="W2P-Ma-feN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kG7-Jc-Xdx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1943" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
