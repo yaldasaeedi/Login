@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.phoneRecuestBTN.backgroundColor = .lightGray
         self.phoneRecuestBTN.isEnabled = false
-
+        self.setupTextFields()
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -110,5 +110,24 @@ class ViewController: UIViewController {
                 }
             }
         }, phone : self.tempPhoneNumber)
+    }
+    
+    func setupTextFields() {
+        let toolbar = UIToolbar()
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                        target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done,
+                                        target: self, action: #selector(doneButtonTapped))
+        
+        doneButton.tintColor = .lightGray
+        toolbar.setItems([flexSpace, doneButton], animated: true)
+        toolbar.sizeToFit()
+            
+        phoneNumberTextField.inputAccessoryView = toolbar
+           
+    }
+        
+    @objc func doneButtonTapped() {
+        view.endEditing(true)
     }
 }
