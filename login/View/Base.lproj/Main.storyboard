@@ -22,89 +22,89 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKf-0R-M2r">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="860"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="860" id="n1x-up-NJy"/>
-                                        </constraints>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dpn-d4-L0d">
-                                        <rect key="frame" x="8" y="70" width="377" height="410"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ورود به حساب شخصی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs5-d0-PzB">
-                                                <rect key="frame" x="0.0" y="0.0" width="377" height="40"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="1if-Rl-6V1"/>
-                                                </constraints>
-                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="31" bottom="8" trailing="8"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="Wvy-x0-MgS">
-                                                <rect key="frame" x="0.0" y="70" width="377" height="80"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره همراه خود را وارد کنید." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlF-zo-PhX">
-                                                <rect key="frame" x="0.0" y="180" width="377" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="zVk-xU-ddQ">
-                                                <rect key="frame" x="0.0" y="270" width="377" height="60"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dpn-d4-L0d">
+                                                <rect key="frame" x="12" y="70" width="369" height="410"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GXZ-IJ-BSl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="60"/>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ورود به حساب شخصی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs5-d0-PzB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="1if-Rl-6V1"/>
+                                                        </constraints>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="31" bottom="8" trailing="8"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="Wvy-x0-MgS">
+                                                        <rect key="frame" x="0.0" y="70" width="369" height="80"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شماره همراه خود را وارد کنید." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlF-zo-PhX">
+                                                        <rect key="frame" x="0.0" y="180" width="369" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="zVk-xU-ddQ">
+                                                        <rect key="frame" x="0.0" y="270" width="369" height="60"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GXZ-IJ-BSl">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="60"/>
+                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                                <connections>
+                                                                    <action selector="phoneNumberEditing:" destination="23b-F9-3Ik" eventType="editingChanged" id="AZT-ll-7rz"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                        <keyboardLayoutGuide key="keyboard" id="1Zk-7C-52Q"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="vi4-O4-bOZ"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nta-qB-Gr8">
+                                                        <rect key="frame" x="0.0" y="360" width="369" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="wVk-EL-rN8"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="ثبت شماره همراه">
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="phoneNumberEditing:" destination="23b-F9-3Ik" eventType="editingDidEnd" id="YyM-V6-2vk"/>
+                                                            <action selector="phoneRecuestBTNClicked:" destination="23b-F9-3Ik" eventType="touchUpInside" id="Lwo-U3-21t"/>
                                                         </connections>
-                                                    </textField>
+                                                    </button>
                                                 </subviews>
-                                                <keyboardLayoutGuide key="keyboard" id="1Zk-7C-52Q"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="vi4-O4-bOZ"/>
+                                                    <constraint firstItem="Nta-qB-Gr8" firstAttribute="leading" secondItem="dpn-d4-L0d" secondAttribute="leading" id="5Wa-wN-11x"/>
+                                                    <constraint firstItem="Gs5-d0-PzB" firstAttribute="top" secondItem="dpn-d4-L0d" secondAttribute="top" id="61X-ur-Jdv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Gs5-d0-PzB" secondAttribute="trailing" id="S7H-Zr-n12"/>
+                                                    <constraint firstItem="QlF-zo-PhX" firstAttribute="height" secondItem="Wvy-x0-MgS" secondAttribute="height" multiplier="0.75" id="aDS-tj-K8q"/>
+                                                    <constraint firstItem="Nta-qB-Gr8" firstAttribute="leading" secondItem="dpn-d4-L0d" secondAttribute="leading" id="cYA-ND-Hur"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Nta-qB-Gr8" secondAttribute="trailing" id="eCF-c6-a4E"/>
+                                                    <constraint firstItem="Wvy-x0-MgS" firstAttribute="height" secondItem="Gs5-d0-PzB" secondAttribute="height" multiplier="2" id="lBD-eY-J9O"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Nta-qB-Gr8" secondAttribute="trailing" id="nV8-tY-BZw"/>
+                                                    <constraint firstItem="Gs5-d0-PzB" firstAttribute="leading" secondItem="dpn-d4-L0d" secondAttribute="leading" id="yHT-ai-GH1"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nta-qB-Gr8">
-                                                <rect key="frame" x="0.0" y="360" width="377" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="wVk-EL-rN8"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="ثبت شماره همراه">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="phoneRecuestBTNClicked:" destination="23b-F9-3Ik" eventType="touchUpInside" id="Lwo-U3-21t"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Nta-qB-Gr8" firstAttribute="leading" secondItem="dpn-d4-L0d" secondAttribute="leading" id="5Wa-wN-11x"/>
-                                            <constraint firstItem="Gs5-d0-PzB" firstAttribute="top" secondItem="dpn-d4-L0d" secondAttribute="top" id="61X-ur-Jdv"/>
-                                            <constraint firstAttribute="trailing" secondItem="Gs5-d0-PzB" secondAttribute="trailing" id="S7H-Zr-n12"/>
-                                            <constraint firstItem="QlF-zo-PhX" firstAttribute="height" secondItem="Wvy-x0-MgS" secondAttribute="height" multiplier="0.75" id="aDS-tj-K8q"/>
-                                            <constraint firstItem="Nta-qB-Gr8" firstAttribute="leading" secondItem="dpn-d4-L0d" secondAttribute="leading" id="cYA-ND-Hur"/>
-                                            <constraint firstAttribute="trailing" secondItem="Nta-qB-Gr8" secondAttribute="trailing" id="eCF-c6-a4E"/>
-                                            <constraint firstItem="Wvy-x0-MgS" firstAttribute="height" secondItem="Gs5-d0-PzB" secondAttribute="height" multiplier="2" id="lBD-eY-J9O"/>
-                                            <constraint firstAttribute="trailing" secondItem="Nta-qB-Gr8" secondAttribute="trailing" id="nV8-tY-BZw"/>
-                                            <constraint firstItem="Gs5-d0-PzB" firstAttribute="leading" secondItem="dpn-d4-L0d" secondAttribute="leading" id="yHT-ai-GH1"/>
+                                            <constraint firstItem="dpn-d4-L0d" firstAttribute="leading" secondItem="yKf-0R-M2r" secondAttribute="leading" constant="12" id="H3g-PM-Rtx"/>
+                                            <constraint firstItem="dpn-d4-L0d" firstAttribute="top" secondItem="yKf-0R-M2r" secondAttribute="top" constant="70" id="IF3-H2-meu"/>
+                                            <constraint firstAttribute="height" constant="860" id="n1x-up-NJy"/>
+                                            <constraint firstAttribute="trailing" secondItem="dpn-d4-L0d" secondAttribute="trailing" constant="12" id="sNH-v0-he8"/>
                                         </constraints>
-                                    </stackView>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="yKf-0R-M2r" secondAttribute="bottom" id="4OV-a7-efQ"/>
-                                    <constraint firstItem="dpn-d4-L0d" firstAttribute="leading" secondItem="iYf-IE-6ji" secondAttribute="leading" constant="8" id="BHx-4F-h8B"/>
-                                    <constraint firstItem="dpn-d4-L0d" firstAttribute="top" secondItem="iYf-IE-6ji" secondAttribute="top" constant="70" id="Lb9-7h-2lb"/>
-                                    <constraint firstItem="dpn-d4-L0d" firstAttribute="leading" secondItem="iYf-IE-6ji" secondAttribute="leading" constant="8" id="Ubo-2j-IVq"/>
                                     <constraint firstAttribute="trailing" secondItem="yKf-0R-M2r" secondAttribute="trailing" id="mCo-UZ-PqX"/>
                                     <constraint firstItem="yKf-0R-M2r" firstAttribute="top" secondItem="iYf-IE-6ji" secondAttribute="top" id="oaQ-Lz-LNf"/>
-                                    <constraint firstAttribute="trailing" secondItem="dpn-d4-L0d" secondAttribute="trailing" constant="8" id="vCh-Kv-LQU"/>
-                                    <constraint firstAttribute="trailing" secondItem="dpn-d4-L0d" secondAttribute="trailing" constant="8" id="vkL-WO-55g"/>
                                     <constraint firstItem="yKf-0R-M2r" firstAttribute="width" secondItem="iYf-IE-6ji" secondAttribute="width" id="xpc-W2-UJ7"/>
                                     <constraint firstItem="yKf-0R-M2r" firstAttribute="leading" secondItem="iYf-IE-6ji" secondAttribute="leading" id="zj7-9Z-45u"/>
                                 </constraints>
@@ -126,110 +126,134 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QcP-pp-uf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233" y="4"/>
+            <point key="canvasLocation" x="1134" y="4"/>
         </scene>
         <!--CodeVerification-->
-        <scene sceneID="ymH-8B-xeN">
+        <scene sceneID="2w6-vv-Vdb">
             <objects>
-                <viewController storyboardIdentifier="CodeVerification" title="CodeVerification" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J0x-ab-REE" customClass="CodeVerificationViewController" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FIu-5V-4yb">
+                <viewController storyboardIdentifier="CodeVerification" title="CodeVerification" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3hs-0q-m1i" customClass="CodeVerificationViewController" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IpX-3r-9Kh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4qc-N5-pTJ">
-                                <rect key="frame" x="12" y="59" width="369" height="390.66666666666669"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8C-Es-AA7">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تایید شماره همراه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gi3-jB-svu">
-                                        <rect key="frame" x="0.0" y="0.0" width="369" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="eP4-qH-leA"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد چهار رقمی ارسال شده خود را وارد نمایید" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qb-lq-kn1">
-                                        <rect key="frame" x="0.0" y="70" width="369" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jue-AT-CI9">
-                                        <rect key="frame" x="0.0" y="120.33333333333334" width="369" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDi-F6-Tx3">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tt4-xZ-e9J">
-                                                <rect key="frame" x="0.0" y="0.0" width="369" height="60"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="bvy-zM-z9X"/>
-                                                </constraints>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                <connections>
-                                                    <action selector="verificationCodeEditing:" destination="J0x-ab-REE" eventType="editingChanged" id="NiK-WH-lFZ"/>
-                                                </connections>
-                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6Fo-I2-ANx">
+                                                <rect key="frame" x="12" y="70.000000000000028" width="369" height="390.66666666666674"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تایید شماره همراه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEU-1K-nt1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="xT2-eS-yds"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کد چهار رقمی ارسال شده خود را وارد نمایید" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJp-a0-YkF">
+                                                        <rect key="frame" x="0.0" y="70" width="369" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hhy-D4-OuF">
+                                                        <rect key="frame" x="0.0" y="120.33333333333334" width="369" height="60"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKg-yz-xmZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="60"/>
+                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="mzR-ZR-KvP"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <connections>
+                                                                    <action selector="verificationCodeEditing:" destination="3hs-0q-m1i" eventType="editingChanged" id="Xud-3J-MUa"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-Tm-C1l">
+                                                        <rect key="frame" x="0.0" y="210.33333333333331" width="369" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="yWe-Fs-B5X"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="ثبت"/>
+                                                        <connections>
+                                                            <action selector="verificationCodeBTNClicked:" destination="3hs-0q-m1i" eventType="touchUpInside" id="ful-1t-jG2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="________________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7T-x6-koD">
+                                                        <rect key="frame" x="0.0" y="290.33333333333331" width="369" height="20.333333333333314"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xcm-zT-Ckm">
+                                                        <rect key="frame" x="0.0" y="340.66666666666669" width="369" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSN-14-iE1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="50"/>
+                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="nxS-TI-W9l"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="gray" title="ارسال مجدد کد">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="sendCodeAgainBTNClicked:" destination="3hs-0q-m1i" eventType="touchUpInside" id="w8b-5O-9vc"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEZ-n3-AIZ">
-                                        <rect key="frame" x="0.0" y="210.33333333333331" width="369" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="hhC-ZX-r9v"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Fo-I2-ANx" secondAttribute="trailing" constant="12" id="68S-U5-JEy"/>
+                                            <constraint firstItem="6Fo-I2-ANx" firstAttribute="leading" secondItem="BDi-F6-Tx3" secondAttribute="leading" constant="12" id="Ifu-FO-Gtq"/>
+                                            <constraint firstItem="6Fo-I2-ANx" firstAttribute="top" secondItem="BDi-F6-Tx3" secondAttribute="top" constant="70" id="O6Y-cC-C7W"/>
+                                            <constraint firstAttribute="height" constant="1000" id="t7p-XW-gn7"/>
                                         </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="ثبت"/>
-                                        <connections>
-                                            <action selector="verificationCodeBTNClicked:" destination="J0x-ab-REE" eventType="touchUpInside" id="WXn-s3-8JB"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="________________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKc-L5-MSu">
-                                        <rect key="frame" x="0.0" y="290.33333333333331" width="369" height="20.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DLs-sa-Lno">
-                                        <rect key="frame" x="0.0" y="340.66666666666669" width="369" height="50"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="de6-Jm-d7m">
-                                                <rect key="frame" x="0.0" y="0.0" width="369" height="50"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="kjZ-aw-ySU"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="ارسال مجدد کد">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="sendCodeAgainBTNClicked:" destination="J0x-ab-REE" eventType="touchUpInside" id="r6A-lK-b7b"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="BDi-F6-Tx3" firstAttribute="top" secondItem="i8C-Es-AA7" secondAttribute="top" id="2zX-hu-cLh"/>
+                                    <constraint firstItem="BDi-F6-Tx3" firstAttribute="width" secondItem="i8C-Es-AA7" secondAttribute="width" id="FW3-Bn-hSf"/>
+                                    <constraint firstItem="BDi-F6-Tx3" firstAttribute="trailing" secondItem="i8C-Es-AA7" secondAttribute="trailing" id="HmU-YZ-thl"/>
+                                    <constraint firstItem="BDi-F6-Tx3" firstAttribute="bottom" secondItem="i8C-Es-AA7" secondAttribute="bottom" id="bzg-Yd-Na2"/>
+                                    <constraint firstItem="BDi-F6-Tx3" firstAttribute="leading" secondItem="i8C-Es-AA7" secondAttribute="leading" id="qRh-js-ehe"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="h81-XO-iaJ"/>
+                        <viewLayoutGuide key="safeArea" id="icZ-Z5-iGT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4qc-N5-pTJ" firstAttribute="top" secondItem="h81-XO-iaJ" secondAttribute="top" id="E3f-KP-wZy"/>
-                            <constraint firstItem="4qc-N5-pTJ" firstAttribute="leading" secondItem="h81-XO-iaJ" secondAttribute="leading" constant="12" id="gCX-Xk-48I"/>
-                            <constraint firstItem="h81-XO-iaJ" firstAttribute="trailing" secondItem="4qc-N5-pTJ" secondAttribute="trailing" constant="12" id="xua-ms-tGH"/>
+                            <constraint firstAttribute="bottom" secondItem="i8C-Es-AA7" secondAttribute="bottom" id="QBc-wU-5IO"/>
+                            <constraint firstItem="i8C-Es-AA7" firstAttribute="trailing" secondItem="icZ-Z5-iGT" secondAttribute="trailing" id="QUa-xb-UWp"/>
+                            <constraint firstItem="i8C-Es-AA7" firstAttribute="leading" secondItem="icZ-Z5-iGT" secondAttribute="leading" id="m29-mg-UNz"/>
+                            <constraint firstItem="i8C-Es-AA7" firstAttribute="top" secondItem="IpX-3r-9Kh" secondAttribute="top" id="n5a-85-QgE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tZs-sG-a2m"/>
                     <connections>
-                        <outlet property="verificationCodeBTN" destination="QEZ-n3-AIZ" id="hCz-lo-WTb"/>
-                        <outlet property="verificationCodeTextField" destination="Tt4-xZ-e9J" id="W2P-Ma-feN"/>
+                        <outlet property="verificationCodeBTN" destination="oCe-Tm-C1l" id="F5q-dp-9l1"/>
+                        <outlet property="verificationCodeTextField" destination="cKg-yz-xmZ" id="LQv-Ii-afG"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kG7-Jc-Xdx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CAI-dh-CRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="4"/>
+            <point key="canvasLocation" x="2030" y="4"/>
         </scene>
     </scenes>
     <resources>

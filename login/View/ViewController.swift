@@ -53,14 +53,18 @@ class ViewController: UIViewController {
             switch result{
                 
             case .success(_):
+                
                 DispatchQueue.main.async {
+                    
                     self.phoneRecuestBTN.backgroundColor = .blue
                     self.phoneRecuestBTN.isEnabled = true
                 }
                 
 
             case .failure(_): 
+                
                 DispatchQueue.main.async {
+                    
                     self.phoneRecuestBTN.backgroundColor = .lightGray
                     self.phoneRecuestBTN.isEnabled = false
                 }
@@ -73,43 +77,26 @@ class ViewController: UIViewController {
         
         self.tempPhoneNumber = phoneNumberTextField.text ?? ""
         
-        self.viewModel.checkPhoneNumber(completionHandler: { result in
-            
+        self.viewModel.sendVerificationCode(completionHandler: { result in
             switch result{
                 
-            case .success(let validPhoneNumber):
-                APICaller.shared.sendVerificationSMSToUser(completionHandler: {  result in
-                    
-                    switch result{
-                    case .success(_):
-                        
-                        DispatchQueue.main.async{
-                            
-                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            let codeVerificationVC = storyboard.instantiateViewController(withIdentifier: "CodeVerification") as! CodeVerificationViewController
-                            codeVerificationVC.phoneNumber = .init(validPhoneNumber)
-                            self.present(codeVerificationVC, animated: true, completion: nil)
-                        }
-                        
-                    case .failure(let error):
-                        
-                        print(error)
-                        DispatchQueue.main.async{
-                            
-                            self.bannerMessage.showNotificationBanner(for: .systemError)
-                        }
-                    }
-                }, mobileNumber: validPhoneNumber)
+            case .success(_):
                 
-            case .failure(let error):
-                
-                print(error)
                 DispatchQueue.main.async{
                     
-                    self.bannerMessage.showNotificationBanner(for: .unValidPhoneNumber)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let codeVerificationVC = storyboard.instantiateViewController(withIdentifier: "CodeVerification") as! CodeVerificationViewController
+                    codeVerificationVC.phoneNumber = .init(self.tempPhoneNumber)
+                    self.present(codeVerificationVC, animated: true, completion: nil)
+                }
+            case .failure(_):
+                
+                DispatchQueue.main.async{
+                    
+                    self.bannerMessage.showNotificationBanner(for: .systemError)
                 }
             }
-        }, phone : self.tempPhoneNumber)
+        }, validPhoneNumber: self.tempPhoneNumber)
     }
     
     func setupTextFields() {

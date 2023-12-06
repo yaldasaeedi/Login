@@ -9,23 +9,18 @@ import Foundation
 
 protocol APIGetRequest {
     
-    func sendVerificationSMSToUser(completionHandler: @escaping ( _ result : Result< String , NetworkError>) -> Void, mobileNumber : String)
+    func sendVerificationSMSToUser(completionHandler: @escaping ( _ result : Result< NetworkRequestSuccessResult , NetworkRequestFailedResult>) -> Void, mobileNumber : String)
     
-    func settingTempTokenForUser(completionHandler: @escaping ( _ result : Result<Token, NetworkError>) -> Void)
+    func settingTempTokenForUser(completionHandler: @escaping ( _ result : Result<Token, NetworkRequestFailedResult>) -> Void)
 
 }
 
 protocol APIPostRequest {
     
-    func reciveVerificationSMSFromUser(completionHandler: @escaping ( _ result : Result<Token, NetworkError>) -> Void, mobileNumber : String,verificationCode : String)
+    func reciveVerificationSMSFromUser(completionHandler: @escaping ( _ result : Result<Token, NetworkRequestFailedResult>) -> Void, mobileNumber : String,verificationCode : String)
 }
 
-enum NetworkError : Error {
-    
-    case urlError
-    case canNotPresentData
-    case codeIsNotValid
-}
+
 
 class APICaller :APIGetRequest, APIPostRequest{
     
@@ -36,7 +31,7 @@ class APICaller :APIGetRequest, APIPostRequest{
     }
     private var viewModel : MainViewModel = MainViewModel()
     
-    func sendVerificationSMSToUser(completionHandler: @escaping ( _ result : Result< String , NetworkError>) -> Void, mobileNumber : String) {
+    func sendVerificationSMSToUser(completionHandler: @escaping ( _ result : Result< NetworkRequestSuccessResult , NetworkRequestFailedResult>) -> Void, mobileNumber : String) {
         
         let urlString = "\(NetworkConstant.shared.servarAddress)/v3/verification/sms/request?mobileNumber=\(mobileNumber)&uuid=4859532c-8ded-11ee-b9d1-0242ac120002&dialCode=98&regionCode=IR"
         
@@ -50,7 +45,7 @@ class APICaller :APIGetRequest, APIPostRequest{
             
             if let error = error {
                     
-                completionHandler(.failure(error as! NetworkError))
+                completionHandler(.failure(error as! NetworkRequestFailedResult))
                 return
             }
             guard let httpResponse = response as? HTTPURLResponse else {
@@ -61,18 +56,18 @@ class APICaller :APIGetRequest, APIPostRequest{
             
             if httpResponse.statusCode == 200{
                 
-                completionHandler(.success(""))
+                completionHandler(.success(.verificationCodeSent))
                 
             }else {
                 
-                completionHandler(.failure(.canNotPresentData))
+                completionHandler(.failure(.urlError))
             }
             
         }.resume()
     }
     
     
-    func reciveVerificationSMSFromUser(completionHandler: @escaping ( _ result : Result<Token, NetworkError>) -> Void, mobileNumber : String,verificationCode : String){
+    func reciveVerificationSMSFromUser(completionHandler: @escaping ( _ result : Result<Token, NetworkRequestFailedResult>) -> Void, mobileNumber : String,verificationCode : String){
         let urlString =  "\(NetworkConstant.shared.servarAddress)/v3/verification/sms/verify?mobileNumber=\(mobileNumber)&uuid=4859532c-8ded-11ee-b9d1-0242ac120002&verificationCode=\(verificationCode)&action=2&regionCode=IR"
         
         guard let url = URL(string: urlString) else{ return }
@@ -85,7 +80,7 @@ class APICaller :APIGetRequest, APIPostRequest{
                 
             if let error = error {
 
-                completionHandler(.failure(error as! NetworkError))
+                completionHandler(.failure(error as! NetworkRequestFailedResult))
                 return
             }
             guard let httpResponse = response as? HTTPURLResponse else {
@@ -107,7 +102,7 @@ class APICaller :APIGetRequest, APIPostRequest{
     }
     
     
-    func settingTempTokenForUser(completionHandler: @escaping ( _ result : Result<Token, NetworkError>) -> Void){
+    func settingTempTokenForUser(completionHandler: @escaping ( _ result : Result<Token, NetworkRequestFailedResult>) -> Void){
         
         let urlString = "\(NetworkConstant.shared.servarAddress)/v1/user/temp?uuid=4859532c-8ded-11ee-b9d1-0242ac120002"
         
@@ -121,7 +116,7 @@ class APICaller :APIGetRequest, APIPostRequest{
             
             if let error = error {
                     
-                completionHandler(.failure(error as? NetworkError ?? .urlError ))
+                completionHandler(.failure(error as? NetworkRequestFailedResult ?? .urlError ))
                 return
             }
             guard let httpResponse = response as? HTTPURLResponse else {

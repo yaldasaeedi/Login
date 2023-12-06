@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46E29ABB0DA13BFA43BAF4DB /* Pods_login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C17AC0CD3ADF4892BFC817 /* Pods_login.framework */; };
+		B5043EF82B20772300C8641B /* ErrorHandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5043EF72B20772300C8641B /* ErrorHandeling.swift */; };
 		B55737D22B1F2FA800EC1087 /* BannerMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55737D12B1F2FA800EC1087 /* BannerMessages.swift */; };
 		B55DE4442B1A343700627077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DE4432B1A343700627077 /* AppDelegate.swift */; };
 		B55DE4462B1A343700627077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DE4452B1A343700627077 /* SceneDelegate.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		65C17AC0CD3ADF4892BFC817 /* Pods_login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3770653FC1F1E8B0D6D0CE7 /* Pods-login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login.release.xcconfig"; path = "Target Support Files/Pods-login/Pods-login.release.xcconfig"; sourceTree = "<group>"; };
+		B5043EF72B20772300C8641B /* ErrorHandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorHandeling.swift; path = ../../../ErrorHandeling.swift; sourceTree = "<group>"; };
 		B55737CE2B1F297300EC1087 /* login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55737CF2B1F297300EC1087 /* loginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55737D02B1F297300EC1087 /* loginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 				B55DE47C2B1A360700627077 /* UserInformation.swift */,
 				B55DE47E2B1A361700627077 /* UserModel.swift */,
 				B55737D12B1F2FA800EC1087 /* BannerMessages.swift */,
+				B5043EF72B20772300C8641B /* ErrorHandeling.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				B55DE4812B1A363400627077 /* UserDefaults.swift in Sources */,
 				B55DE4462B1A343700627077 /* SceneDelegate.swift in Sources */,
 				B55DE4852B1A366400627077 /* NetworkConstant.swift in Sources */,
+				B5043EF82B20772300C8641B /* ErrorHandeling.swift in Sources */,
 				B55DE4832B1A364D00627077 /* APICaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

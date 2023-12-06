@@ -25,7 +25,7 @@ class CodeVerificationViewController : UIViewController{
         
         self.verificationCodeBTN.backgroundColor = .lightGray
         self.verificationCodeBTN.isEnabled = false
-        
+        self.setupTextFields()
     }
   
     @IBAction func verificationCodeEditing(_ sender: Any) {
@@ -62,22 +62,43 @@ class CodeVerificationViewController : UIViewController{
     }
     
     @IBAction func sendCodeAgainBTNClicked(_ sender: Any) {
-        
-        APICaller.shared.sendVerificationSMSToUser(completionHandler: {  result in
-                    
+        self.viewModel.sendVerificationCode(completionHandler: { result in
+            
             switch result{
                 
             case .success(_):
-                self.bannerMessage.showNotificationBanner(for: .codeSent)
                 
-            case .failure(let error):
-                print(error)
+                DispatchQueue.main.async{
+                    self.bannerMessage.showNotificationBanner(for: .codeSent)
+                }
+                
+            case .failure(_):
+                
+                DispatchQueue.main.async{
+                    self.bannerMessage.showNotificationBanner(for: .systemError)
+                }
                         
             }
-        }, mobileNumber: self.phoneNumber )
+        }, validPhoneNumber: self.phoneNumber)
     }
-
-    
+    func setupTextFields() {
+        let toolbar = UIToolbar()
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                        target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done,
+                                        target: self, action: #selector(doneButtonTapped))
+        
+        doneButton.tintColor = .lightGray
+        toolbar.setItems([flexSpace, doneButton], animated: true)
+        toolbar.sizeToFit()
+            
+        verificationCodeTextField.inputAccessoryView = toolbar
+           
+    }
+        
+    @objc func doneButtonTapped() {
+        view.endEditing(true)
+    }
 }
 
 

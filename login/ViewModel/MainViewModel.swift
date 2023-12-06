@@ -14,7 +14,7 @@ class MainViewModel{
     
     private var tempToken : Token?
     
-    func setingTempToken(completionHandler: @escaping ( _ result : Result< String , NetworkError>) -> Void) {
+    func setingTempToken(completionHandler: @escaping ( _ result : Result< NetworkRequestSuccessResult , NetworkRequestFailedResult>) -> Void) {
         
         APICaller.shared.settingTempTokenForUser { result in
             
@@ -23,7 +23,7 @@ class MainViewModel{
             case .success(let token):
                 
                 self.tempToken = token
-                completionHandler(.success("success"))
+                completionHandler(.success(.tempTokenSent))
                 
             case .failure(let error):
                 
@@ -32,7 +32,7 @@ class MainViewModel{
         }
     }
     
-    func checkPhoneNumber(completionHandler: @escaping ( _ result : Result<String, NetworkError>) -> Void, phone : String){
+    func checkPhoneNumber(completionHandler: @escaping ( _ result : Result<String, userCausedError>) -> Void, phone : String){
         
         if (userAutentication.isValidPhone(phone: phone)){
             
@@ -40,11 +40,27 @@ class MainViewModel{
             
         }else{
             
-            completionHandler(.failure(NetworkError.urlError))
+            completionHandler(.failure(.wrongPhoneNumber))
         }
     }
     
-    func checkVerificationCode(completionHandler: @escaping ( _ result : Result<String, NetworkError>) -> Void, code : String, phone : String){
+    func sendVerificationCode(completionHandler: @escaping ( _ result : Result<String, NetworkRequestFailedResult>) -> Void, validPhoneNumber : String){
+        
+        APICaller.shared.sendVerificationSMSToUser(completionHandler: {  result in
+            
+            switch result{
+            case .success(_):
+                
+                completionHandler(.success(validPhoneNumber))
+            case .failure(let error):
+                
+                completionHandler(.failure(error))
+            }
+        }, mobileNumber: validPhoneNumber)
+    }
+    
+    func checkVerificationCode(completionHandler: @escaping ( _ result : Result<NetworkRequestSuccessResult, NetworkRequestFailedResult>) -> Void, code : String, phone : String){
+        
         APICaller.shared.reciveVerificationSMSFromUser(completionHandler: { result in
             
             switch result{
@@ -53,7 +69,7 @@ class MainViewModel{
                                 
                 self.userModel.addUser(mobileNumber: phone, action: "2", token: token)
             
-                completionHandler(.success("success"))
+                completionHandler(.success(.codeVerified))
                 
             case .failure(let error):
                 

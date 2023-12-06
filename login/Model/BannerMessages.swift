@@ -10,14 +10,6 @@ import NotificationBannerSwift
 
 struct BannerMessages{
     
-    enum State  {
-        case unValidPhoneNumber
-        case unvalidCode
-        case systemError
-        case validCode
-        case codeSent
-    }
-    
     func showNotificationBanner(for state: State) {
         
         switch state{
