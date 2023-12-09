@@ -81,6 +81,7 @@ class CodeVerificationViewController : UIViewController{
             }
         }, validPhoneNumber: self.phoneNumber)
     }
+    
     func setupTextFields() {
         let toolbar = UIToolbar()
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,

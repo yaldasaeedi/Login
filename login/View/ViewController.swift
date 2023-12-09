@@ -45,9 +45,10 @@ class ViewController: UIViewController {
         }
     }
 
-    
     @IBAction func phoneNumberEditing(_ sender: Any) {
+        
         self.tempPhoneNumber = phoneNumberTextField.text ?? ""
+        
         self.viewModel.checkPhoneNumber(completionHandler: {  result in
             
             switch result{
@@ -60,7 +61,6 @@ class ViewController: UIViewController {
                     self.phoneRecuestBTN.isEnabled = true
                 }
                 
-
             case .failure(_): 
                 
                 DispatchQueue.main.async {
@@ -68,7 +68,6 @@ class ViewController: UIViewController {
                     self.phoneRecuestBTN.backgroundColor = .lightGray
                     self.phoneRecuestBTN.isEnabled = false
                 }
-
             }
         }, phone : self.tempPhoneNumber)
     }
@@ -100,11 +99,13 @@ class ViewController: UIViewController {
     }
     
     func setupTextFields() {
+        
         let toolbar = UIToolbar()
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                                         target: nil, action: nil)
         let doneButton = UIBarButtonItem(title: "Done", style: .done,
                                         target: self, action: #selector(doneButtonTapped))
+        
         
         doneButton.tintColor = .lightGray
         toolbar.setItems([flexSpace, doneButton], animated: true)

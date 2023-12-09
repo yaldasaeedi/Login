@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		46E29ABB0DA13BFA43BAF4DB /* Pods_login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C17AC0CD3ADF4892BFC817 /* Pods_login.framework */; };
-		B5043EF82B20772300C8641B /* ErrorHandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5043EF72B20772300C8641B /* ErrorHandeling.swift */; };
 		B55737D22B1F2FA800EC1087 /* BannerMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55737D12B1F2FA800EC1087 /* BannerMessages.swift */; };
 		B55DE4442B1A343700627077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DE4432B1A343700627077 /* AppDelegate.swift */; };
 		B55DE4462B1A343700627077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DE4452B1A343700627077 /* SceneDelegate.swift */; };
@@ -26,6 +25,9 @@
 		B55DE4832B1A364D00627077 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DE4822B1A364D00627077 /* APICaller.swift */; };
 		B55DE4852B1A366400627077 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DE4842B1A366400627077 /* NetworkConstant.swift */; };
 		B55DE4872B1A368000627077 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DE4862B1A368000627077 /* MainViewModel.swift */; };
+		B577D8932B24421C007242B5 /* ErrorHandeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577D8922B24421C007242B5 /* ErrorHandeling.swift */; };
+		B577D8952B244D77007242B5 /* ETRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577D8942B244D77007242B5 /* ETRViewController.swift */; };
+		B577D8972B246126007242B5 /* ETRInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B577D8962B246126007242B5 /* ETRInformation.swift */; };
 		B5E1F17C2B1C9DD7002F85D7 /* CodeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1F17B2B1C9DD7002F85D7 /* CodeVerificationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +51,6 @@
 /* Begin PBXFileReference section */
 		65C17AC0CD3ADF4892BFC817 /* Pods_login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3770653FC1F1E8B0D6D0CE7 /* Pods-login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login.release.xcconfig"; path = "Target Support Files/Pods-login/Pods-login.release.xcconfig"; sourceTree = "<group>"; };
-		B5043EF72B20772300C8641B /* ErrorHandeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorHandeling.swift; path = ../../../ErrorHandeling.swift; sourceTree = "<group>"; };
 		B55737CE2B1F297300EC1087 /* login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55737CF2B1F297300EC1087 /* loginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55737D02B1F297300EC1087 /* loginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +72,9 @@
 		B55DE4822B1A364D00627077 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		B55DE4842B1A366400627077 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		B55DE4862B1A368000627077 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B577D8922B24421C007242B5 /* ErrorHandeling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandeling.swift; sourceTree = "<group>"; };
+		B577D8942B244D77007242B5 /* ETRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETRViewController.swift; sourceTree = "<group>"; };
+		B577D8962B246126007242B5 /* ETRInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETRInformation.swift; sourceTree = "<group>"; };
 		B5E1F17B2B1C9DD7002F85D7 /* CodeVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewController.swift; sourceTree = "<group>"; };
 		FE38A5AAC914F031F0B195C1 /* Pods-login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login.debug.xcconfig"; path = "Target Support Files/Pods-login/Pods-login.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,12 +139,12 @@
 		B55DE4422B1A343700627077 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				B55DE4762B1A349800627077 /* resource */,
+				B55DE4732B1A346900627077 /* View */,
 				B55DE4792B1A34E000627077 /* ViewModel */,
+				B55DE4752B1A348D00627077 /* Model */,
 				B55DE4782B1A34D200627077 /* Network */,
 				B55DE4772B1A34B500627077 /* UserDefaults */,
-				B55DE4752B1A348D00627077 /* Model */,
-				B55DE4732B1A346900627077 /* View */,
+				B55DE4762B1A349800627077 /* resource */,
 				B55DE4512B1A343900627077 /* Info.plist */,
 			);
 			path = login;
@@ -168,6 +172,7 @@
 			children = (
 				B55DE4472B1A343700627077 /* ViewController.swift */,
 				B5E1F17B2B1C9DD7002F85D7 /* CodeVerificationViewController.swift */,
+				B577D8942B244D77007242B5 /* ETRViewController.swift */,
 				B55DE4492B1A343700627077 /* Main.storyboard */,
 				B55DE44E2B1A343900627077 /* LaunchScreen.storyboard */,
 			);
@@ -177,11 +182,12 @@
 		B55DE4752B1A348D00627077 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B577D8922B24421C007242B5 /* ErrorHandeling.swift */,
 				B55DE47A2B1A35F600627077 /* UserAutentication.swift */,
 				B55DE47C2B1A360700627077 /* UserInformation.swift */,
+				B577D8962B246126007242B5 /* ETRInformation.swift */,
 				B55DE47E2B1A361700627077 /* UserModel.swift */,
 				B55737D12B1F2FA800EC1087 /* BannerMessages.swift */,
-				B5043EF72B20772300C8641B /* ErrorHandeling.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -396,18 +402,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B577D8952B244D77007242B5 /* ETRViewController.swift in Sources */,
 				B55DE47D2B1A360700627077 /* UserInformation.swift in Sources */,
 				B5E1F17C2B1C9DD7002F85D7 /* CodeVerificationViewController.swift in Sources */,
 				B55DE4482B1A343700627077 /* ViewController.swift in Sources */,
 				B55DE47B2B1A35F600627077 /* UserAutentication.swift in Sources */,
 				B55DE4442B1A343700627077 /* AppDelegate.swift in Sources */,
+				B577D8932B24421C007242B5 /* ErrorHandeling.swift in Sources */,
 				B55737D22B1F2FA800EC1087 /* BannerMessages.swift in Sources */,
 				B55DE47F2B1A361700627077 /* UserModel.swift in Sources */,
 				B55DE4872B1A368000627077 /* MainViewModel.swift in Sources */,
 				B55DE4812B1A363400627077 /* UserDefaults.swift in Sources */,
 				B55DE4462B1A343700627077 /* SceneDelegate.swift in Sources */,
 				B55DE4852B1A366400627077 /* NetworkConstant.swift in Sources */,
-				B5043EF82B20772300C8641B /* ErrorHandeling.swift in Sources */,
+				B577D8972B246126007242B5 /* ETRInformation.swift in Sources */,
 				B55DE4832B1A364D00627077 /* APICaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
