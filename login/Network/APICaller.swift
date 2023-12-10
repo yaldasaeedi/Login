@@ -19,7 +19,7 @@ protocol APIPostRequest {
     
     func reciveVerificationSMSFromUser(completionHandler: @escaping ( _ result : Result<Token, NetworkRequestFailedResult>) -> Void, mobileNumber : String,verificationCode : String)
     
-    func ETARequest()
+    func ETARequest(completionHandler: @escaping ( _ result : Result<String, NetworkRequestFailedResult>) -> Void, originLat : String, originLng : String, destinationLat : String, destinationLng : String)
 }
 
 
@@ -141,7 +141,7 @@ class APICaller :APIGetRequest, APIPostRequest{
         }.resume()
     }
     
-    func ETARequest(){
+    func ETARequest(completionHandler: @escaping ( _ result : Result<String, NetworkRequestFailedResult>) -> Void, originLat : String, originLng : String, destinationLat : String, destinationLng : String){
         
         let urlString = "https://routing.neshanmap.ir/v4.2/eta"
         
@@ -154,16 +154,18 @@ class APICaller :APIGetRequest, APIPostRequest{
         urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         urlRequest.setValue("okhttp_VC: 70147_UUID: test", forHTTPHeaderField: "User-Agent")
         
-        let requestBody = "resName=res1&uuid=4859532c-8ded-11ee-b9d1-0242ac120002&datasetName=primary&origin={\"noneSnapped\":{\"isUserLocation\":true,\"lat\":36.29022899999998,\"lng\":59.616005}}&destination={\"lat\":36.200693060010465,\"lng\":59.401448230279264}&appState="
+        let requestBody = "resName=res1&uuid=4859532c-8ded-11ee-b9d1-0242ac120002&datasetName=primary&origin={\"noneSnapped\":{\"isUserLocation\":true,\"lat\":\(originLat),\"lng\":\(originLng)}}&destination={\"lat\":\(destinationLat),\"lng\":\(destinationLng)}&appState="
         urlRequest.httpBody = requestBody.data(using: .utf8)
      
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             
             if let error = error {
                 print(error)
+                completionHandler(.failure(.urlError))
             }
             guard let httpResponse = response as? HTTPURLResponse else {
                 print("httpResponse");
+                completionHandler(.failure(.urlError))
                 return
             }
             print(httpResponse.statusCode)
@@ -172,13 +174,17 @@ class APICaller :APIGetRequest, APIPostRequest{
                let resultData = try? JSONDecoder().decode(ETRInformation.self, from: data) {
                 
                 print(resultData)
-                
+            
                 guard let duDecoding = resultData.res.data.r.first?.du else{
+                    
                     print("du is empty")
+                    completionHandler(.failure(.canNotPresentData))
                     return
                 }
                 guard let dsDecoding = resultData.res.data.r.first?.ds else{
+                    
                     print("ds is empty")
+                    completionHandler(.failure(.canNotPresentData))
                     return
                 }
                 if let data = Data(base64Encoded : duDecoding ) {
@@ -188,16 +194,21 @@ class APICaller :APIGetRequest, APIPostRequest{
                         print(decodedString)
                     }
                 } else {
+                    
                     print("Failed to decode the Base64 string.")
+                    completionHandler(.failure(.canNotPresentData))
                 }
                 if let data = Data(base64Encoded : dsDecoding ) {
                     
                     if let decodedString = String(data: data, encoding: .utf8) {
                         
+                        completionHandler(.success(decodedString))
                         print(decodedString)
                     }
                 } else {
+                    
                     print("Failed to decode the Base64 string.")
+                    completionHandler(.failure(.canNotPresentData))
                 }
             }
         }.resume()

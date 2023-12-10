@@ -50,6 +50,12 @@ class CodeVerificationViewController : UIViewController{
             case .success(_):
                 DispatchQueue.main.async{
                     self?.bannerMessage.showNotificationBanner(for: .validCode)
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let ETRViewControllerVC = storyboard.instantiateViewController(withIdentifier: "ETRViewController") as! ETRViewController
+                    self?.present(ETRViewControllerVC, animated: true, completion: nil)
+
+                    
                 }
                 
             case .failure(_):
@@ -69,6 +75,7 @@ class CodeVerificationViewController : UIViewController{
             case .success(_):
                 
                 DispatchQueue.main.async{
+                    
                     self.bannerMessage.showNotificationBanner(for: .codeSent)
                 }
                 

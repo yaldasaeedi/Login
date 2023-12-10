@@ -212,7 +212,6 @@
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="sendCodeAgainBTNClicked:" destination="3hs-0q-m1i" eventType="touchUpInside" id="w8b-5O-9vc"/>
-                                                                    <segue destination="2Fc-gQ-HAK" kind="show" id="HqB-8H-URH"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -261,11 +260,11 @@
             <objects>
                 <viewController storyboardIdentifier="ETRViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Fc-gQ-HAK" customClass="ETRViewController" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Bs-2N-2E7">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdr-7D-aEg">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzm-Xg-g0p">
                                         <rect key="frame" x="0.0" y="0.0" width="430" height="1000"/>
