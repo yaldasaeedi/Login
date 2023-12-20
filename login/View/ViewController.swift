@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         self.phoneNumberTextField.placeholder = "09123456789"
-                
+       
         self.viewModel.setingTempToken { result in
             
             switch result{

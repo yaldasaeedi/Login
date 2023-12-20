@@ -27,10 +27,8 @@ protocol APIPostRequest {
 class APICaller :APIGetRequest, APIPostRequest{
     
     public static var shared: APICaller = APICaller()
-    
-    private init(){
-        
-    }
+    private var userDefaults: AuthenticationUserDefaults = AuthenticationUserDefaults(storageKey: "users")
+
     private var viewModel : MainViewModel = MainViewModel()
     
     func sendVerificationSMSToUser(completionHandler: @escaping ( _ result : Result< NetworkRequestSuccessResult , NetworkRequestFailedResult>) -> Void, mobileNumber : String) {
@@ -212,6 +210,50 @@ class APICaller :APIGetRequest, APIPostRequest{
                 }
             }
         }.resume()
+        
+    }
+    func crowdSourcingReportRequest (completionHandler: @escaping ( _ result : Result<[String], NetworkRequestFailedResult>) -> Void, description : String, originLat : String, originLng : String, destinationLat : String, destinationLng : String){
+        
+        let urlString = "https://app-staging.neshanmap.ir/crowdsourcing-report/v2/report/?timeDifference=8"
+        
+        guard let url = URL(string: urlString) else{ return }
+        
+        var urlRequest = URLRequest(url: url)
+        
+        urlRequest.httpMethod = "POST"
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let token : String = self.userDefaults.getUserToken()?.accessToken.description ?? ""
+        urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let requestBody = "{\"description\" : \"\(description)\",\"location\": \"POINT(\(originLat), \(originLng))\",\"snappedLocation\": \"POINT (\(destinationLat),\(destinationLng))\",\"source\": \"String\",\"speed\": 60,\"degree\": 45.5,\"timeDifference\": 3600,\"routingSessionId\": \"98595705c58742608b8a08f537685361\",\"activityTypeSlug\": \"String\",\"actualDateTime\": \"2023-12-13T10:00:00\" }"
+        
+        urlRequest.httpBody = requestBody.data(using: .utf8)
+     
+        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            
+        if let error = error {
+            print(error)
+            completionHandler(.failure(.urlError))
+        }
+        guard let httpResponse = response as? HTTPURLResponse else {
+            print("httpResponse");
+            completionHandler(.failure(.urlError))
+            return
+        }
+        print(httpResponse.statusCode)
+        if httpResponse.statusCode == 200,
+        let data = data,
+        let resultData = try? JSONDecoder().decode(crowdSourcingReportinformation.self, from: data) {
+                
+            if let decodedString = String(data: data, encoding: .utf8) {
+                completionHandler(.success(resultData.messages))
+            }else {
+                
+                print("Failed to decode")
+                completionHandler(.failure(.canNotPresentData))
+            }
+        }
+    }.resume()
         
     }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		46E29ABB0DA13BFA43BAF4DB /* Pods_login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C17AC0CD3ADF4892BFC817 /* Pods_login.framework */; };
+		B5517FDB2B32DAAE005C6BA2 /* crowdSourcingReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517FDA2B32DAAE005C6BA2 /* crowdSourcingReportViewController.swift */; };
+		B5517FDD2B32DB4C005C6BA2 /* crowdSourcingReportinformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517FDC2B32DB4C005C6BA2 /* crowdSourcingReportinformation.swift */; };
 		B55737D22B1F2FA800EC1087 /* BannerMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55737D12B1F2FA800EC1087 /* BannerMessages.swift */; };
 		B55DE4442B1A343700627077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DE4432B1A343700627077 /* AppDelegate.swift */; };
 		B55DE4462B1A343700627077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DE4452B1A343700627077 /* SceneDelegate.swift */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		65C17AC0CD3ADF4892BFC817 /* Pods_login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3770653FC1F1E8B0D6D0CE7 /* Pods-login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login.release.xcconfig"; path = "Target Support Files/Pods-login/Pods-login.release.xcconfig"; sourceTree = "<group>"; };
+		B5517FDA2B32DAAE005C6BA2 /* crowdSourcingReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crowdSourcingReportViewController.swift; sourceTree = "<group>"; };
+		B5517FDC2B32DB4C005C6BA2 /* crowdSourcingReportinformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crowdSourcingReportinformation.swift; sourceTree = "<group>"; };
 		B55737CE2B1F297300EC1087 /* login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55737CF2B1F297300EC1087 /* loginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55737D02B1F297300EC1087 /* loginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +177,7 @@
 				B55DE4472B1A343700627077 /* ViewController.swift */,
 				B5E1F17B2B1C9DD7002F85D7 /* CodeVerificationViewController.swift */,
 				B577D8942B244D77007242B5 /* ETRViewController.swift */,
+				B5517FDA2B32DAAE005C6BA2 /* crowdSourcingReportViewController.swift */,
 				B55DE4492B1A343700627077 /* Main.storyboard */,
 				B55DE44E2B1A343900627077 /* LaunchScreen.storyboard */,
 			);
@@ -182,11 +187,12 @@
 		B55DE4752B1A348D00627077 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B577D8922B24421C007242B5 /* ErrorHandeling.swift */,
-				B55DE47A2B1A35F600627077 /* UserAutentication.swift */,
 				B55DE47C2B1A360700627077 /* UserInformation.swift */,
+				B5517FDC2B32DB4C005C6BA2 /* crowdSourcingReportinformation.swift */,
 				B577D8962B246126007242B5 /* ETRInformation.swift */,
+				B55DE47A2B1A35F600627077 /* UserAutentication.swift */,
 				B55DE47E2B1A361700627077 /* UserModel.swift */,
+				B577D8922B24421C007242B5 /* ErrorHandeling.swift */,
 				B55737D12B1F2FA800EC1087 /* BannerMessages.swift */,
 			);
 			path = Model;
@@ -411,10 +417,12 @@
 				B577D8932B24421C007242B5 /* ErrorHandeling.swift in Sources */,
 				B55737D22B1F2FA800EC1087 /* BannerMessages.swift in Sources */,
 				B55DE47F2B1A361700627077 /* UserModel.swift in Sources */,
+				B5517FDB2B32DAAE005C6BA2 /* crowdSourcingReportViewController.swift in Sources */,
 				B55DE4872B1A368000627077 /* MainViewModel.swift in Sources */,
 				B55DE4812B1A363400627077 /* UserDefaults.swift in Sources */,
 				B55DE4462B1A343700627077 /* SceneDelegate.swift in Sources */,
 				B55DE4852B1A366400627077 /* NetworkConstant.swift in Sources */,
+				B5517FDD2B32DB4C005C6BA2 /* crowdSourcingReportinformation.swift in Sources */,
 				B577D8972B246126007242B5 /* ETRInformation.swift in Sources */,
 				B55DE4832B1A364D00627077 /* APICaller.swift in Sources */,
 			);

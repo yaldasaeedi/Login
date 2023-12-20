@@ -11,7 +11,9 @@ protocol UserStorage {
     
     func saveUser(_ user: UserInformation)
     func fetchUsers() -> [UserInformation]
+    func getUserToken() -> Token?
 }
+
 
 class AuthenticationUserDefaults : UserStorage{
     
@@ -60,5 +62,35 @@ class AuthenticationUserDefaults : UserStorage{
             return []
         }
     }
+    func getUserToken() -> Token? {
+        
+        var tempToken : Token?
+        let encodedData = userDefaults.data(forKey: storageKey)
+            
+        do {
+                
+            let decoder = JSONDecoder()
+            let savedUsers = try decoder.decode([UserInformation].self, from: encodedData!)
+    
+            return savedUsers.last?.token
+        } catch {
+                
+            print("Error occurred while decoding data: \(error)")
+        }
+        APICaller.shared.settingTempTokenForUser { result in
+            switch result{
+                
+            case .success(let token):
+                
+                tempToken = token
+                
+            case .failure(let error):
+                
+                print(error)
+            }
+        }
+        return tempToken
+    }
+    
     
 }

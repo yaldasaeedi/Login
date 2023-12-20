@@ -62,6 +62,10 @@ class CodeVerificationViewController : UIViewController{
                 
                 DispatchQueue.main.async{
                     self?.bannerMessage.showNotificationBanner(for: .unvalidCode)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let ETRViewControllerVC = storyboard.instantiateViewController(withIdentifier: "ETRViewController") as! ETRViewController
+                    self?.present(ETRViewControllerVC, animated: true, completion: nil)
+
                 }
             }
         }, code: verificationCodeTextField.text ?? "", phone: self.phoneNumber )

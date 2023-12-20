@@ -1,35 +1,42 @@
 //
-//  ETRViewController.swift
+//  crowdSourcingReportViewController.swift
 //  login
 //
-//  Created by yalda saeedi on 9/18/1402 AP.
+//  Created by yalda saeedi on 9/29/1402 AP.
 //
 
 import Foundation
 import UIKit
 import NotificationBannerSwift
 
-class ETRViewController : UIViewController {
+class crowdSourcingReportViewController : UIViewController {
     
+    @IBOutlet weak var descriptionTF: UITextField!
     @IBOutlet weak var originLatTF: UITextField!
     @IBOutlet weak var originLngTF: UITextField!
     @IBOutlet weak var destinationLatTF: UITextField!
     @IBOutlet weak var destinationLngTF: UITextField!
     
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.descriptionTF.placeholder = "لطفا گزارش خود را وارد کنید"
         self.originLatTF.placeholder = "لطفا عرض جغرافیایی مبدا را وارد کنید"
         self.originLngTF.placeholder =  "لطفا طول جغرافیایی مبدا را وارد کنید"
         self.destinationLatTF.placeholder = "لطفا عرض جغرافیایی مقصد را وارد کنید"
         self.destinationLngTF.placeholder = "لطفا طول جغرافیایی مقصد را وارد کنید"
         
         self.setupTextFields()
-        
     }
     
-    @IBAction func callingETA(_ sender: Any) {
+    @IBAction func sendBTNClicked(_ sender: Any) {
+        
+        guard let description = self.descriptionTF.text else{
+            
+            print("description is empty")
+            return
+        }
         guard let originLat = self.originLatTF.text else{
             
             print("originLat is empty")
@@ -50,29 +57,24 @@ class ETRViewController : UIViewController {
             print("destinationLng is empty")
             return
         }
-        APICaller.shared.ETARequest(completionHandler: { result in
+        APICaller.shared.crowdSourcingReportRequest (completionHandler:{ result in
             
             switch result{
                 
-            case .success(let distance):
+            case .success(let state):
                 DispatchQueue.main.async{
-                    let distanceBanner = NotificationBanner(title: "مسافت",
-                                                            subtitle: "مسافت شما برابر است با:\(distance)",
+                    let distanceBanner = NotificationBanner(title: "گزارش",
+                                                            subtitle:state.description,
                                                             leftView: nil,
                                                             rightView: nil,
                                                             style: .success,
                                                             colors: nil)
                     distanceBanner.show()
-                    
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let crowdSourcingReportVC = storyboard.instantiateViewController(withIdentifier: "crowdSourcingReportViewController") as! crowdSourcingReportViewController
-                    self.present(crowdSourcingReportVC, animated: true, completion: nil)
                 }
-                
             case .failure(let error):
                 DispatchQueue.main.async{
-                    let errorBanner = NotificationBanner(title: "مسافت",
-                                                            subtitle: "شما طول و عرض اشتباهی وارد کردید",
+                    let errorBanner = NotificationBanner(title: "گزارش",
+                                                            subtitle: "گزارش شما ارسال نشد",
                                                             leftView: nil,
                                                             rightView: nil,
                                                             style: .warning,
@@ -81,11 +83,8 @@ class ETRViewController : UIViewController {
                 }
                 print(error)
             }
-            
-        }, originLat: originLat,
-           originLng: originLng,
-           destinationLat: destinationLat,
-           destinationLng: destinationLng)
+                
+        }, description: description, originLat: originLat, originLng: originLng, destinationLat: destinationLat, destinationLng: destinationLng)
     }
     
     func setupTextFields() {
@@ -106,6 +105,8 @@ class ETRViewController : UIViewController {
     }
         
     @objc func doneButtonTapped() {
+        
         view.endEditing(true)
     }
+    
 }
